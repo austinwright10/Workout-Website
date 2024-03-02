@@ -1,0 +1,209 @@
+<!--Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: Austin Wright
+Submitted: 3/1/2024
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+Reflection:
+I actually enjoyed putting this website together once I got into the groove. It was weird at first as I was getting the hang of things
+but when it came together it went by pretty quick. Some things did feel pretty tedious but that could've been due to the fact that I did some
+things really inefficiently. Overall, I'm happy with what I learned and am satisfied with what I created.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>PUSH/PULL/LEGS</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><p>Workout Split</p>
+      <img src = "logo.png" alt="weightlifing logo" class = "logo">
+    </header>
+    <nav>
+      <ul>
+        <li class = "nav_home"><a onclick = "toggleDisplay('home', 'nav_home')">Home</a></li>
+        <li class = "nav_push"><a onclick = "toggleDisplay('push', 'nav_push')">Push</a></li>
+        <li class = "nav_pull"><a onclick = "toggleDisplay('pull', 'nav_pull')">Pull</a></li>
+        <li class = "nav_legs"><a onclick = "toggleDisplay('legs', 'nav_legs')">Legs</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="home">
+        <div id = "whyExercise">
+        <h4>Why Exercise?</h4>
+        <p>According to <a href = "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise/art-20048389">Mayo Clinic,</a>
+          regular exercise offers a multitude of benefits for both physical and mental well-being. It aids in weight management by burning 
+          calories and can prevent or manage various health conditions including heart disease, high blood pressure, and diabetes. 
+          Exercise boosts mood, energy levels, and promotes better sleep, while also enhancing sexual function and providing opportunities 
+          for social interaction. Following recommended guidelines for aerobic and strength training activities not only improves overall 
+          health but also adds enjoyment to daily life, making exercise an essential component of a happier and healthier lifestyle.</p>
+        </div>
+        <div id = "exercisers">
+          <figure>
+          <a class = "exerciseLink" href = "https://www.istockphoto.com/photo/portrait-of-a-young-man-and-woman-working-out-in-a-gym-gm1359766322-433002078" target = "_blank">
+          <img src = "exercisers.jpeg" alt = "Stock Image of two people in exercise clothes"></a>
+          </figure>
+        </div>
+        <div id = "myExperience">
+          <h4>My Experience</h4>
+          <p>I got into weightlifting/exercising when I was in high school and was introduced to it by my brother. Back then, I would never realize how big of a role it'd play in 
+            my day to day life. Push/Pull/Legs has always been my go to workout ever since I started and personally I don't think there's a better workout out there for strength training.
+            with consistent exercise and proper diet I have been fortunate enough to see substantial progress from my time in the gym. My squat and deadlift are nearing 400 pounds each and
+            currently able to bench press just over 300 pounds. The physical changes that I've seen over the years have been nice but they haven't been as important as my mental and emotional changes
+            wrought from exercise. Exercise allows me to clear my mind and hit a mental reset on a day when I need it most. Hopefully this website is insighful enough for it to do the same for you.</p>
+        </div>
+      </section>
+      <section class="push">
+        <div id = "chest">
+          <h4>Chest Exercises</h4>
+          <p>Personally, chest is one of my favorite muscle groups to train because I've always excelled at it ever since I started lifting. And I feel there is low potential for injury if your
+            form is good. There are a handful of different movements/exercises that you can do to target different parts of your chest. <a href = "https://www.usatoday.com/story/life/health-wellness
+            /2023/10/17/bench-press-muscles-incline-weights-dumbbells/71144840007/" target = "_blank">
+            Flat barbell bench press</a> is the first thing people think of when you
+            talk about bench press. There's <a href = "https://www.verywellfit.com/how-to-do-incline-dumbbell-press-4588212" target = "_blank">incline and decline presses</a> and you can even add in dumbbell work to allow more movement between each arm. Feel free to check out each link for more information
+            about each exercise.</p>
+        </div>
+        <div>
+          <iframe id = "bench_video" width="400" height="400" src="https://www.youtube.com/embed/4Y2ZdHCOXok" allowfullscreen></iframe>
+        </div>
+        <div id = "shoulders">
+          <h4>Shoulder Exercises</h4>
+          <p>Shoulder play a huge role in chest movements/exercises. During flat bench press you are actually using a lot of your front deltoid (shoulder muscle) to assist your chest to move
+            that weight up. My favorite shoulder exercise is called the lateral raise. You take some pretty lightweight dumbbells, have your arms fall to your side and raise your arms up
+            as if you were transitioning into a T pose. What's important about this exercise is that you don't swing your arms too much and that you lift with your shoulder and not your wrists.
+            Consistent and intentional shoulder workouts will lead to a big increase in shoulder size and strength.
+          </p>
+        </div>
+        <div id = "lateral_raise">
+          <figure>
+          <a href = "https://www.shutterstock.com/search/dumbbell-lateral-raise" target = "_blank">
+          <img src = "lateral_raise.webp"></a>
+          <figcaption>Lateral raise exercise</figcaption>
+          </figure>
+        </div>
+        <div id = "triceps">
+          <h4>Tricep Exercises</h4>
+          <p>Triceps are another muscle group that assists heavily in the bench press. If you haven't noticed but the reason these
+            muscle groups are under the "Push" category is because these movements involve pushing weight away from you. These muscle 
+            groups are connectec with each other in a way. Bench press is a good movement that can help grow/strengthen your triceps but
+            there are some other movements that help a lot more. Tricep pushdown is probably the most common tricep exercise that you'll
+            see a lot of people do. You'll typically need a cable connected to some weight that's about eye level to you. Connected to
+            that cable is a set of ropes that you grab with each hand. You tuck your elbows into your side and try to straighten your
+            arms without moving your elbows, which then focuses primarily on your triceps.
+          </p>
+        </div>
+        <div id = "tricep_pushdown">
+          <figure>
+          <a href = "https://us.myprotein.com/thezone/training/triceps-pushdown-exercise-technique-common-mistakes/" target = "_blank">
+            <img src = "tricep_pushdown.jpeg" alt = "tricep pushdown exercise">
+          </a>
+          <figcaption>Tricep pushdown exercise</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="pull">
+        <div id = "back">
+          <h4>Back Exercises</h4>
+          <p>Most back movements, if not all, will involve you pulling the weight closer to you to ensure
+            contracted back muscles. Think of a pull up for example, you pull yourself up to squeeze
+            and contract your back muscles to give them that desired burn. Pull ups are very common back exercises and so is the lat pulldown.
+            Think of it as a seated pull up but you're bringing the weight down to you. It allows you to adjust
+            the weight to your desired limit and gives you the chance to go at your pace to effectively control your
+            back muscles.
+          </p>
+        </div>
+        <div id = "lat_pulldown">
+          <figure>
+          <a href = "https://fitnessprogramer.com/exercise/lat-pulldown/" target = "_blank">
+            <img src = "Lat-Pulldown.gif" alt = "Lat pulldown">
+          </a>
+          <figcaption>Lat Pulldown</figcaption>
+          </figure>
+        </div>
+        <div id = "biceps">
+          <h4>Bicep Exercises</h4>
+          <p>Biceps aren't the funnest muscle group to train, they're on the more boring side in my opinion. But working them out is just
+            as important as every other muscle group. If you were to train every other muscle in your arm other than your bicep then you'd
+            start have muscle imbalance in your arms, which is something you for sure want to avoid. A very good bicep exercise is your
+            common dumbbell bicep curl. This will allow you to focus hard on your eccentric and concentric movements with each arm (the
+            rise and fall movements against the weight).
+          </p>
+        </div>
+        <div id = "bicep-curl">
+          <figure>
+          <a href = "https://fitnessprogramer.com/exercise/dumbbell-curl/" target="_blank">
+            <img src = "bicep-curl.gif" alt = "Bicep curl exercise">
+          </a>
+          <figcaption>Dumbbell bicep curl</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="legs">
+        <div id = "quads">
+          <h4>Quad Exercises</h4>
+          <p>The quads make up a large percentage of all the muscles in your legs and is a muscle group that takes discipline
+            and hard work to see the results. They are located on the front part of your thigh and you can feel them flexed when you
+            straighten your leg out all the way. There are a lot of different movements and ways you can target your quads but the most
+            effective way seems to be the squat. The squat works more than just your quads but if you want a good burn on them then definitely
+            stick with the squat.
+          </p>
+        </div>
+        <div id = "squat">
+          <figure>
+          <a href = "https://fitnessprogramer.com/exercise/squat/" target="_blank">
+            <img src = "squat.gif" alt = "Squat exercise">
+          </a>
+          <figcaption>Barbell Squat</figcaption>
+          </figure>
+        </div>
+        <div id = "hamstrings">
+          <h4>Hamstring Exercises</h4>
+          <p>The hamstrings consist of the back part of thighs and play a big role in bending down/over to pick stuff up.
+            That super good stretch that you have after a really long roadtrip comes from being able to straighten your legs and
+            relieve some tension in your hamstrings. My favorite hamstring exercise is called the romanian deadlift. It's very similar to
+            a regular deadlift but with less back movement. Your legs barely bend which puts all the weight on the back side of your legs, or
+            otherwise known as your hamstrings.
+          </p>
+        </div>
+        <div id = "romanian-deadlift">
+          <figure>
+          <a href = "https://fitnessprogramer.com/exercise/romanian-deadlift/" target="_blank">
+            <img src = "romanian-deadlift.gif" alt = "Romanian deadlift exercise">
+          </a>
+          <figcaption>Romanian Deadlift</figcaption>
+          </figure>
+        </div>
+        <div id = "calves">
+          <h4>Calf Exercises</h4>
+          <p>The calves lie on the back side of your lower leg. When you stand up on your tip toes you are actually flexing your
+            calf muscles to allow your feet to do that. Working out your calf muscles are pretty straight forward, there's really
+            only a handful of movements that target your calf muscles, and all of them include going up on your tip toes. They are a hard
+            muscle group to train and grow.
+          </p>
+        </div>
+        <div id = "calf-raise">
+          <figure>
+          <a href = "https://fitnessprogramer.com/exercise/single-leg-calf-raise/" target="_blank">
+            <img src = "calf-raise.gif" alt = "Calf raise exercise">
+          </a>
+          <figcaption>Calf Raise</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

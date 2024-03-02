@@ -1,0 +1,361 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 8vh 5vh auto 7vh;
+  grid-template-areas:"head" "nav" "main" "footer";
+  margin: 0px;
+}
+header, nav, footer {
+  text-align: center;
+}
+header {
+  grid-area: head;
+  font-size:3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(rgb(90, 183, 232), lightblue);
+}
+h4{
+  font-size: 1.5em;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: nav;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+main {
+  display: block;
+  grid-area: main;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+footer {
+  background-image: linear-gradient(rgb(90, 183, 232), lightblue);
+  grid-area: footer;
+  height: auto;
+}
+.home {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.push {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#whyExercise, #myExperience, #chest, #shoulders, #triceps, #back
+, #biceps, #quads, #hamstrings, #calves{
+  width: 100vw;
+  line-height: 1.5;
+}
+#exercisers, #bench_video, #lateral_raise, #tricep_pushdown, 
+#lat_pulldown, #bicep-curl, #squat, #romanian-deadlift, #calf-raise {
+  display: none;
+}
+.pull {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.legs {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Nav Bar Style */
+ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: small;
+}
+li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 8vw;
+  transition: transform 0.3s;
+}
+li a:hover {
+  background-color: none;
+  transform: scale(1.3);
+}
+.logo {
+  display: none;
+}
+figcaption {
+  text-align: center;
+}
+
+/* Tablet Style */
+@media all and (min-width: 600px) {
+  body {
+    font-family: 'Raleway', sans-serif;
+    grid-template-columns: 100vw;
+    grid-template-rows: 12vh 8vh auto 10vh;
+    grid-template-areas:
+    "head"
+    "nav"
+    "main"
+    "footer";
+  }
+  header {
+    flex-direction: row;
+    padding-left: 20px;
+  }
+  .home, .push, .pull, .legs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  #exercisers {
+    display: none;
+  }
+  #bench_video, #lateral_raise, #tricep_pushdown, #lat_pulldown,
+  #bicep-curl, #squat, #romanian-deadlift, #calf-raise{
+    display: flex;
+    flex-direction: column;
+  }
+  #whyExercise, #myExperience {
+    width: auto;
+    line-height: 1.5;
+  }
+  #chest, #shoulders, #triceps {
+    width: auto;
+    line-height: 1.5;
+  }
+  #bench_video {
+    width: 80vw;
+  }
+  #back, #biceps {
+    width: auto;
+    line-height: 1.5;
+  }
+  #quads, #hamstrings, #calves {
+    width: auto;
+    line-height: 1.5;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  ul li {
+    flex: 1;
+    font-size: 2.5em;
+    text-align: center;
+    justify-content: center;
+  }
+  ul {
+    flex-direction: row;;
+  }
+  li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 8vw;
+    transition: transform 0.3s;
+  }
+  li a:hover {
+    background-color: none;
+    transform: scale(1.3);
+  }
+  .logo {
+    display: none;
+  }
+}
+
+/* Desktop Style */
+@media all and (min-width: 900px) {
+  body {
+    font-family: 'Raleway', sans-serif;
+    grid-template-columns: 100vw;
+    grid-template-rows: 12vh 8vh auto 10vh;
+    grid-template-areas:
+    "head"
+    "nav"
+    "main"
+    "footer";
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-around;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    box-shadow: 3px 3px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  ul li {
+    font-size: 2.5em;
+    text-align: center;
+    justify-content: center;
+  }
+  ul {
+    flex-direction: row;
+  }
+  li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  li a:hover {
+    background-color: none;
+    transform: scale(1.3);
+  }
+  header {
+    justify-content: space-between;
+    padding-left: 20px;
+    flex-direction: row;
+  }
+  .logo {
+    display: flex;
+    padding-right: 2%;
+  }
+  .home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    min-height: auto;
+    padding-left: 20px;
+  }
+  #whyExercise {
+    width: 45vw;
+    line-height: 1.8;
+  }
+  #exercisers {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #myExperience {
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82vw; 
+  }
+  .push {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-left: 20px;
+  }
+  #chest {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #bench_video {
+    width: 600px;
+    display: flex;
+    height: 400px;
+    margin-top: 40px;
+  }
+  #shoulders {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #lateral_raise {
+    display: flex;
+    transform: scale(.7);
+    flex-direction: column;
+  }
+  #triceps {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #tricep_pushdown {
+    display: flex;
+    flex-direction: column;
+    transform: scale(.7);
+  }
+  figcaption {
+    text-align: center;
+    font-size: 12px;
+  }
+  .pull {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 40px;
+  }
+  #back {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #lat_pulldown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-right: 25px;
+  }
+  #biceps {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #bicep-curl {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-top: 45px;
+  }
+  .legs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 40px;
+  }
+  #quads {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #squat {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-top: 40px;
+  }
+  #hamstrings {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #romanian-deadlift {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-top: 40px;
+  }
+  #calves {
+    width: 35vw;
+    line-height: 1.8;
+  }
+  #calf-raise {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    margin-top: 40px;
+  }
+}
