@@ -17,3 +17,21 @@ function toggleDisplay(className, className2) {
     document.querySelector(`.${className}`).style.display = 'flex';
     document.querySelector(`.${className2}`).style.fontWeight = 'bold';
 }
+
+function dark_mode() {
+    const aTags = document.querySelectorAll('a');
+    if (body.style.backgroundColor == 'white') {
+        body.style.backgroundColor = 'rgb(48, 48, 48)';
+        body.style.color = 'white';
+        darkMode.innerHTML = 'Click here for Light mode!';
+        aTags.forEach(tag => {
+            tag.style.color = 'lightblue';
+        })
+    } else {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        aTags.forEach(tag => {
+            tag.style.color = 'purple';
+        })
+    }
+}
