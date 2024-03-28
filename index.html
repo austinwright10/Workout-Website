@@ -26,15 +26,15 @@ things really inefficiently. Overall, I'm happy with what I learned and am satis
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>PUSH/PULL/LEGS</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body id = "body">
-    <header><p>Workout Split</p>
-      <button id = "darkMode" type = "button" onclick = "dark_mode()">Click here for Dark Mode!</button>
+    <header id = "header"><p>Workout Split</p>
+      <button id = "darkMode" type = "button">Click here for Dark Mode!</button>
       <img src = "images/logo.png" alt="weightlifing logo" class = "logo">
     </header>
-    <nav>
-      <ul>
+    <nav id = "nav">
+      <ul id = "nav-list">
         <li class = "nav_home"><a onclick = "toggleDisplay('home', 'nav_home')">Home</a></li>
         <li class = "nav_push"><a onclick = "toggleDisplay('push', 'nav_push')">Push</a></li>
         <li class = "nav_pull"><a onclick = "toggleDisplay('pull', 'nav_pull')">Pull</a></li>
@@ -205,6 +205,6 @@ things really inefficiently. Overall, I'm happy with what I learned and am satis
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer id = "footer"></footer>
   </body>
 </html>

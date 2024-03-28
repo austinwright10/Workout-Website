@@ -1,0 +1,37 @@
+body {
+    background-color: #121212;
+    color: white;
+}
+
+body a {
+    color: rgb(0, 100, 255);
+}
+
+#nav {
+    background-color: #121212;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+}
+
+#header, #footer {
+    background-image: linear-gradient(rgb(30, 89, 121), darkblue);
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+body a {
+    color: black;
+}
+
+#nav {
+    background-color: white;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+#header, #footer {
+    background-image: linear-gradient(rgb(90, 183, 232), lightblue);
+}

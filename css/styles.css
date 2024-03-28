@@ -5,6 +5,7 @@ body {
   grid-template-rows: 8vh 5vh auto 7vh;
   grid-template-areas:"head" "nav" "main" "footer";
   margin: 0px;
+  background-color: white;
 }
 header, nav, footer {
   text-align: center;
