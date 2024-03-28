@@ -1,5 +1,11 @@
+/*
+I mainly focused on the header since I added the dark mode button to it. I needed to adjust the spacing there a little bit with that addition.
+Got rid of the title as well in the phone view, I felt it was too big for that small of a viewport. I adjusted some line heights to add a little bit more of an
+aesthetic look to the page. Changed the font.
+*/
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 8vh 5vh auto 7vh;
@@ -18,11 +24,19 @@ header {
   justify-content: space-around;
   background-image: linear-gradient(rgb(90, 183, 232), lightblue);
 }
+#title {
+  display: none;
+}
 button {
-  width: 15%;
+  font-size: 1.1vw;
+  padding: 1vh 2vw;
   z-index: 2;
-  height: 2em;
-  justify-content: center;
+  transition: transform 0.3s;
+  border-radius: 10px;
+  border: none;
+}
+button:hover {
+  transform: scale(1.1);
 }
 h4{
   font-size: 1.5em;
@@ -104,7 +118,6 @@ figcaption {
 /* Tablet Style */
 @media all and (min-width: 600px) {
   body {
-    font-family: 'Raleway', sans-serif;
     grid-template-columns: 100vw;
     grid-template-rows: 12vh 8vh auto 10vh;
     grid-template-areas:
@@ -114,13 +127,18 @@ figcaption {
     "footer";
   }
   header {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
     padding-left: 20px;
+  }
+  #title {
+    display: block;
   }
   .home, .push, .pull, .legs {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+
+    gap: 10px;
   }
   #exercisers {
     display: none;
@@ -132,22 +150,22 @@ figcaption {
   }
   #whyExercise, #myExperience {
     width: auto;
-    line-height: 1.5;
+    line-height: 2;
   }
   #chest, #shoulders, #triceps {
     width: auto;
-    line-height: 1.5;
+    line-height: 2;
   }
   #bench_video {
     width: 80vw;
   }
   #back, #biceps {
     width: auto;
-    line-height: 1.5;
+    line-height: 2;
   }
   #quads, #hamstrings, #calves {
     width: auto;
-    line-height: 1.5;
+    line-height: 2;
   }
   nav {
     display: flex;
@@ -189,7 +207,6 @@ figcaption {
 /* Desktop Style */
 @media all and (min-width: 900px) {
   body {
-    font-family: 'Raleway', sans-serif;
     grid-template-columns: 100vw;
     grid-template-rows: 12vh 8vh auto 10vh;
     grid-template-areas:

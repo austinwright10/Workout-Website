@@ -1,3 +1,7 @@
+/*
+Added darker colors to the body and certain tags within the webpage to give it the "dark" effect.
+*/
+
 body {
     background-color: #121212;
     color: white;
