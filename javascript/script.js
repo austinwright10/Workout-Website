@@ -1,5 +1,8 @@
+//added the initvalidation function when the dom is loaded
+
 document.addEventListener("DOMContentLoaded", function() {
     toggleDisplay('home', 'nav_home');
+    initValidation("#visitorForm");
 });
 
 function toggleDisplay(className, className2) {

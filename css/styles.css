@@ -1,7 +1,5 @@
 /*
-I mainly focused on the header since I added the dark mode button to it. I needed to adjust the spacing there a little bit with that addition.
-Got rid of the title as well in the phone view, I felt it was too big for that small of a viewport. I adjusted some line heights to add a little bit more of an
-aesthetic look to the page. Changed the font.
+styled the crap out of the form and adjusted its dimensions between each media query
 */
 
 body {
@@ -18,14 +16,20 @@ header, nav, footer {
 }
 header {
   grid-area: head;
-  font-size:3em;
   display: flex;
+  font-size: 2em;
   align-items: center;
   justify-content: space-around;
   background-image: linear-gradient(rgb(90, 183, 232), lightblue);
 }
 #title {
   display: none;
+}
+#nav-list {
+  display: flex;
+  margin-top: 3px;
+  justify-content: space-between;
+  width: 85%;
 }
 button {
   font-size: 1.1vw;
@@ -42,12 +46,9 @@ h4{
   font-size: 1.5em;
 }
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   grid-area: nav;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
 }
 main {
   display: block;
@@ -94,14 +95,11 @@ ul {
   text-align: center;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  font-size: small;
+  font-size: 1.5em;
 }
 li a {
-  display: flex;
   align-items: center;
   text-decoration: none;
-  margin: 8vw;
   transition: transform 0.3s;
 }
 li a:hover {
@@ -113,6 +111,42 @@ li a:hover {
 }
 figcaption {
   text-align: center;
+}
+.errorMsg {
+    display: none;
+    color: red;
+    margin-top: 5px;
+}
+#visitorForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding-top: 20px;
+  gap: 10px; /* Add gap between flex items */
+  width: 100%; /* Adjust width */
+}
+#submitBtn {
+  font-size: 1em;
+}
+input[type = "text"], select {
+  height: 4vh;
+  box-shadow: 3px 3px rgb(90, 183, 232);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
+}
+textarea[type = "text"] {
+  resize: none;
+  box-shadow: 5px 5px rgb(90, 183, 232);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 
 /* Tablet Style */
@@ -134,10 +168,15 @@ figcaption {
   #title {
     display: block;
   }
+  #nav-list {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 85%;
+  }  
   .home, .push, .pull, .legs {
     flex-wrap: wrap;
     justify-content: space-between;
-
     gap: 10px;
   }
   #exercisers {
@@ -169,7 +208,6 @@ figcaption {
   }
   nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: white;
     border-bottom: solid 2px black;
@@ -178,21 +216,11 @@ figcaption {
   .nav-toggle {
     display: none;
   }
-  ul li {
-    flex: 1;
-    font-size: 2.5em;
-    text-align: center;
-    justify-content: center;
-  }
-  ul {
-    flex-direction: row;;
-  }
   li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    margin: 8vw;
     transition: transform 0.3s;
   }
   li a:hover {
@@ -201,6 +229,34 @@ figcaption {
   }
   .logo {
     display: none;
+  }
+  #visitorForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding-top: 20px;
+    gap: 10px; /* Add gap between flex items */
+    width: 90%; /* Adjust width */
+  }
+  input[type = "text"], select {
+    height: 4vh;
+    box-shadow: 3px 3px rgb(90, 183, 232);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+  }
+  textarea[type = "text"] {
+    resize: none;
+    box-shadow: 5px 5px rgb(90, 183, 232);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -226,16 +282,7 @@ figcaption {
   .nav-toggle {
     display: none;
   }
-  ul li {
-    font-size: 2.5em;
-    text-align: center;
-    justify-content: center;
-  }
-  ul {
-    flex-direction: row;
-  }
   li a {
-    display: flex;
     align-items: center;
     text-decoration: none;
     transition: transform 0.3s;
@@ -380,5 +427,48 @@ figcaption {
     flex-direction: column;
     margin-right: 25px;
     margin-top: 40px;
+  }
+  #visitor {
+    margin-left: 10px;
+  }
+  #visitorForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding-top: 20px;
+  }
+  input[type = "text"], select {
+    height: 4vh;
+    box-shadow: 5px 5px rgb(90, 183, 232);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+  }
+  textarea[type = "text"] {
+    resize: none;
+    box-shadow: 5px 5px rgb(90, 183, 232);
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  label {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+    margin-top: 30px;
+  }
+  input[type="text"]:hover, select:hover, textarea:hover {
+    transform: scale(1.05);
+  }
+  .invalid[type = "text"] {
+    border: 2px solid red;
+  }
+  select.invalid {
+    border: 2px solid red;
   }
 }

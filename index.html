@@ -1,6 +1,6 @@
-<!--Project:  Project 4-Responsive Web Site-CSS Theme and Refactor
+<!-- Project:  Project5-Personal Web Site-Visitor Form Validation-Refactor JS
 Name: Austin Wright
-Submitted: 3/28/2024
+Submitted: 4/12/23
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -11,8 +11,8 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
 
 Reflection:
 I actually enjoyed putting this website together once I got into the groove. It was weird at first as I was getting the hang of things
-but when it came together it went by pretty quick. Getting the dark mode to work took me a while but once I picked my code apart line by line I
-quickly noticed what was wrong, and it was a very stupid mistake haha. I'm getting the hang of JavaScript the more I use it so I'm happy about that.
+but when it came together it went by pretty quick. It was a little challenging trying to piece all of the javascript functions together though. I did have to watch a tutorial or two
+on trying to get the change eventlisteners to work but that was probably the most challenging part.
 
 -->
 
@@ -25,7 +25,8 @@ quickly noticed what was wrong, and it was a very stupid mistake haha. I'm getti
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>PUSH/PULL/LEGS</title>
-    <script src="script.js"></script>
+    <script src = "javascript/validate.js"></script>
+    <script src="javascript/script.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body id = "body">
@@ -39,6 +40,7 @@ quickly noticed what was wrong, and it was a very stupid mistake haha. I'm getti
         <li class = "nav_push"><a onclick = "toggleDisplay('push', 'nav_push')">Push</a></li>
         <li class = "nav_pull"><a onclick = "toggleDisplay('pull', 'nav_pull')">Pull</a></li>
         <li class = "nav_legs"><a onclick = "toggleDisplay('legs', 'nav_legs')">Legs</a></li>
+        <li class = "nav_form"><a onclick = "toggleDisplay('form', 'nav_form')">Form</a></li>
       </ul>
     </nav>
     <main>
@@ -202,6 +204,29 @@ quickly noticed what was wrong, and it was a very stupid mistake haha. I'm getti
           </a>
           <figcaption>Calf Raise</figcaption>
           </figure>
+        </div>
+      </section>
+      <section class = "form">
+        <div>
+          <h2 id = "visitor">Visitor Form</h2>
+          <form id = "visitorForm" novalidate>
+            <label for="fullname">First & Last Name</label><input type="text" id="fullname" name="fullname" required><div class="errorMsg"></div>
+            <label for="address">Address</label><input type="text" id="address" name="address" required><div class="errorMsg"></div>
+            <label for = "city">City</label><input type = "text" id = "city" name = "city" required><div class="errorMsg"></div>
+            <label for = "state">State</label><input type = "text" id = "state" name = "state" maxlength = "2" required><div class="errorMsg"></div>
+            <label for = "zip">ZIP</label><input type = "text" id = "zip" name = "zip" required><div class="errorMsg"></div>
+            <label for = "phone">Phone Number</label><input type = "text" id = "phone" name = "phone" required><div class="errorMsg"></div>
+            <label for = "email">Email</label><input type = "text" id = "email" name = "email" required><div class="errorMsg"></div>
+            <label for = "find">How did you find my page?</label><select name="find" id = "find" required>
+              <option></option>
+              <option value="internet">Internet</option>
+              <option value="friend">Friend/Family</option>
+              <option value="google">Google</option>
+              <option value="socialmedia">Social Media</option>
+            </select><div class="errorMsg"></div>
+            <label for = "comments">Comments</label><textarea type = "text" id = "comments" name = "comments" rows = "10" cols = "50"></textarea>
+            <button id = "submitBtn" type = "submit">Submit</button>
+          </form>
         </div>
       </section>
     </main>
